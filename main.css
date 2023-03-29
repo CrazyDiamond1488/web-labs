@@ -29,6 +29,9 @@ footer {
     font-size: 16pt;
     text-align: right;
     transition: 5s;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 footer:hover {
     background: linear-gradient( blue, rgb(6, 6, 98) ,rgb(108, 13, 155),rgb(155, 13, 127));
