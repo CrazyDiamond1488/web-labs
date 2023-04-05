@@ -34,8 +34,8 @@ footer {
     width: 100%;
 }
 footer:hover {
-    background: linear-gradient( blue, rgb(6, 6, 98) ,rgb(108, 13, 155),rgb(155, 13, 127));
-    color: black; 
+    background: linear-gradient( blue, rgb(6, 6, 98) ,rgb(108, 13, 155 )                     ,rgb(155, 13, 127));
+    color: black;  мчмачв
     padding: 10px; 
     font-size: 20pt;
     font-weight: bold;
