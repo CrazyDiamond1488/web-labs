@@ -72,6 +72,14 @@
 
     }
 
+
+    function removeСircle(lock) {
+        lock.style.height = '0';
+        lock.style.width = '0';
+        lock.style.fontSize = '0';
+        lock.style.border = '0';
+    }
+
     </script>
     <style>
         .message {
@@ -111,6 +119,22 @@
 
         }
 
+
+        .lock div {
+            border: 3px solid;
+            border-radius: 50%;
+            display: inline-block;
+            color: black;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+            font-size: 20pt;   
+        }
+        
+
+
     </style>
 </head>
 
@@ -142,11 +166,28 @@
             <div class="Basket">Корзина товаров</div>
             <label>Яблоки (100р/шт): <div><input type="number" value="0" id="Apple"></label></div>
             <label>Груши (80р/шт): <div><input type="number" value="0" id="Pear"></label></label></div>
-            <label>Апельсина (150р/шт): <div><input type="number" value="0" id="Orange"></label></label></div>
+            <label>Апельсины (150р/шт): <div><input type="number" value="0" id="Orange"></label></label></div>
             <label>Дыни (300р/шт): <div><input type="number" value="0" id="Melon"></label></label></div>
             <input type="button" value="Рассчитать" onclick="Sum()">
             <div id="Money">Итоговая сумма:</div>
         </div>
+
+
+        <div class="lock">
+            <div style="background-color: blue;" onclick="removeСircle(this)" >1</div>
+            <div style="background-color:yellow" onclick="removeСircle(this)">2</div>
+            <div style="background-color: aqua;" onclick="removeСircle(this)">3</div>
+            <div style="background-color:purple" onclick="removeСircle(this)">4</div>
+            <div style="background-color: orange" onclick="removeСircle(this)">5</div>
+            <div style="background-color:brown" onclick="removeСircle(this)">6</div>
+            <div style="background-color: grey" onclick="removeСircle(this)">7</div>
+            <div style="background-color:forestgreen" onclick="removeСircle(this)">8</div>
+            <div style="background-color:aquamarine" onclick="removeСircle(this)">9</div>
+            <div style="background-color: blueviolet;" onclick="removeСircle(this)">10</div>
+            
+        </div>
+    
+    
     </main>
 
     <footer onclick="showAuthor()">
