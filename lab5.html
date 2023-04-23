@@ -55,6 +55,23 @@
         output.style.border = border;
     }
 
+    function Sum () {
+        let Apple = document.getElementById("Apple");
+        let Pear = document.getElementById("Pear");
+        let Orange = document.getElementById("Orange");
+        let Melon = document.getElementById("Melon");
+
+        let a = parseInt(Apple.value);
+        let b = parseInt(Pear.value);
+        let c = parseInt(Orange.value);
+        let d = parseInt(Melon.value);
+        let result = a*100 + b*80 + c*150 + d*300;
+       
+        let f = document.getElementById("Money")
+        f.innerHTML = 'Итоговая сумма : ' + result + ' рублей.'
+
+    }
+
     </script>
     <style>
         .message {
@@ -74,6 +91,24 @@
             width: 300px;
             height: 40px;
             
+        }
+
+        .Store {
+            border: 3px solid;
+            width: 350px;
+            height: 300px;
+            text-align: left;
+            padding: 10px;
+            margin: 25px;
+        }
+        
+        .Basket {
+            font-weight: bold;
+            font-size: 25pt;
+            text-align: center;
+            color: red;
+            padding: 10px;
+
         }
 
     </style>
@@ -102,6 +137,16 @@
         </div>
 
         <div id="output"></div>
+
+        <div class="Store">
+            <div class="Basket">Корзина товаров</div>
+            <label>Яблоки (100р/шт): <div><input type="number" value="0" id="Apple"></label></div>
+            <label>Груши (80р/шт): <div><input type="number" value="0" id="Pear"></label></label></div>
+            <label>Апельсина (150р/шт): <div><input type="number" value="0" id="Orange"></label></label></div>
+            <label>Дыни (300р/шт): <div><input type="number" value="0" id="Melon"></label></label></div>
+            <input type="button" value="Рассчитать" onclick="Sum()">
+            <div id="Money">Итоговая сумма:</div>
+        </div>
     </main>
 
     <footer onclick="showAuthor()">
