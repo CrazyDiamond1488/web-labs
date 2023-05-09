@@ -40,9 +40,9 @@
 
         #moving-block {
             position: absolute;
-            left: 0; /* задаем начальное положение блока */
-            transform: translateX(0%); /* центрируем блок по горизонтали */
-            transition: all 5s ease-out; /* добавляем плавный эффект при перемещении */
+            left: 0; 
+            transform: translateX(0%); 
+            transition: all 5s ease-out; 
             background-color: black;
             width: 150px;
             height: 150px;
@@ -51,6 +51,16 @@
             text-align: center;
             line-height: 150px;
             cursor: pointer;
+        }
+
+        #bigblock {
+            width: 100px;
+            cursor: pointer;
+            background-color: aqua;
+            margin-top: 200px;
+            text-align: center;
+            border: 5px solid purple;
+            border-radius: 10px;
         }
         
 
@@ -160,6 +170,17 @@
             block.style.left = "0"; 
             }
         }
+
+        function increaseWidth() {
+            const block = document.getElementById("bigblock");
+            const currentWidth = parseInt(block.style.width);
+            const newWidth = currentWidth + 50;
+            if (newWidth <= 1000) {
+            block.style.width = newWidth + "px";
+            } else {
+            block.style.width = "100px";
+            }
+        }
   
     </script>
 </head>
@@ -221,6 +242,8 @@
         </div>
 
         <div id="moving-block" onclick="moveBlock()">Щёлкни меня</div>
+
+        <div id="bigblock" onclick="increaseWidth()">Увеличение</div>
           
          
 
