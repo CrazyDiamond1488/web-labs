@@ -29,6 +29,15 @@
             background-color: aliceblue;
         }
 
+        .color {
+            background-color: yellow;
+            width: 400px;
+            height: auto;
+            border-radius: 30px;
+            padding: 10px;
+
+        }
+
     </style>
 
     <script>
@@ -91,6 +100,37 @@
                 document.getElementsByClassName("hide-rules")[0].style.display = "none";
         }
 
+        function changeColor(div) {
+            if (div.style.backgroundColor == 'yellow') {
+                div.style.backgroundColor = 'red';
+                div.style.color = 'black';
+                document.getElementById('Color-name').innerHTML = 'красный';
+            }
+
+            else if (div.style.backgroundColor == 'red') {
+                div.style.backgroundColor = 'black';
+                div.style.color = 'blue';
+                document.getElementById('Color-name').innerHTML = 'черный';
+            }
+
+            else if (div.style.backgroundColor == 'black') {
+                div.style.backgroundColor = 'orange';
+                div.style.color = 'white';
+                document.getElementById('Color-name').innerHTML = 'оранжевый';
+            }
+
+            else if (div.style.backgroundColor == 'orange') {
+                div.style.backgroundColor = 'white';
+                div.style.color = 'black';
+                document.getElementById('Color-name').innerHTML = 'белый';
+            }
+
+            else {
+                div.style.backgroundColor = 'yellow';
+                div.style.color = 'black';
+                document.getElementById('Color-name').innerHTML = 'жёлтый';
+            }
+        }
     </script>
 </head>
 
@@ -145,6 +185,10 @@
             </ol>
           </div>
           
+          <div class="color" ondblclick="changeColor(this)">
+            Цвет: <span id="Color-name">Желтый</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
+        </div>
           
          
 
