@@ -38,6 +38,22 @@
 
         }
 
+        #moving-block {
+            position: absolute;
+            left: 0; /* задаем начальное положение блока */
+            transform: translateX(0%); /* центрируем блок по горизонтали */
+            transition: all 5s ease-out; /* добавляем плавный эффект при перемещении */
+            background-color: black;
+            width: 150px;
+            height: 150px;
+            padding: 10px;
+            margin-top: 15px;
+            text-align: center;
+            line-height: 150px;
+            cursor: pointer;
+        }
+        
+
     </style>
 
     <script>
@@ -131,6 +147,20 @@
                 document.getElementById('Color-name').innerHTML = 'жёлтый';
             }
         }
+
+        
+        
+        function moveBlock() {
+            let block = document.getElementById("moving-block");
+            if (block.style.left == "0px") { 
+            block.style.transform = "rotate(4turn)"
+            block.style.left = "calc(100% - 150px)"; 
+            } else {
+            block.style.transform = "rotate(0)";
+            block.style.left = "0"; 
+            }
+        }
+  
     </script>
 </head>
 
@@ -189,6 +219,8 @@
             Цвет: <span id="Color-name">Желтый</span><br>
             Сделайте двойной щелчок, чтобы сменить.
         </div>
+
+        <div id="moving-block" onclick="moveBlock()">Щёлкни меня</div>
           
          
 
