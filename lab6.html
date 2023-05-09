@@ -18,6 +18,17 @@
             padding: 10px;
             
         }
+
+        #rules {
+            border: 1px solid;
+            width: 400px;
+            height: auto;
+            border-radius: 20px;
+            border-color: black;
+            padding: 10px;
+            background-color: aliceblue;
+        }
+
     </style>
 
     <script>
@@ -67,6 +78,19 @@
             clearinput.value = '';
             document.getElementById ('result').innerHTML = '';
         }
+
+        function showRules() {
+            document.getElementById("rules").style.display = "block";
+            document.getElementsByClassName("show-rules")[0].style.display = "none";
+            document.getElementsByClassName("hide-rules")[0].style.display = "block";
+        }
+
+        function hideRules() {
+                document.getElementById("rules").style.display = "none";
+                document.getElementsByClassName("show-rules")[0].style.display = "block";
+                document.getElementsByClassName("hide-rules")[0].style.display = "none";
+        }
+
     </script>
 </head>
 
@@ -104,6 +128,25 @@
                 <button onclick="again()">Сыграть ещё раз</button>
             </div>
         </div>
+
+        <div>
+            <button class="show-rules" onclick="showRules()">Показать правила игры</button>
+            <button class="hide-rules" onclick="hideRules()" style="display:none">Скрыть правила игры</button>
+          </div>
+          
+          <div id="rules" style="display:none">
+            <h2>Правила игры</h2>
+            <ol style=" list-style-type: upper-roman;" >
+              <li>сначала нажмите на кнопку "сыграть в игру"</li>
+              <li>далее пытайтесь угадать число</li>
+              <li>если угадали число, то начинайте новую игру</li>
+              <li>если не угадали, то пытайтесь дальше</li>
+              <li>если захотите еще раз сыграть, то нажмите на кнопку сыграть еще раз</li>
+            </ol>
+          </div>
+          
+          
+         
 
     </main>
 
