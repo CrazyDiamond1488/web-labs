@@ -7,12 +7,28 @@
     <title>Шишкин Юстиниан Михайлович</title>
     <link rel="stylesheet" href="main.css">
 </head>
+
+    <script>
+        function addBlock () {
+            let blocks = document.getElementById('blocks');
+            for (let i=0; i < 10; i++ ) {
+                let block = document.createElement('div');
+                block.innerHTML = 'Блок №' + (i+1) + ':' + (2 * i**2);
+
+                blocks.appendChild(block); 
+            }
+                  
+        }
+    </script>
+
 <body>
     <header>
         НГТУ, ФБ, Лабораторная работа 7
     </header>
-    <main>
 
+    <main>
+        <button onclick="addBlock()">Создать блоки</button>
+        <div id="blocks"></div>
     </main>
 
     <footer>
