@@ -121,9 +121,9 @@
         }
 
         function hideRules() {
-                document.getElementById("rules").style.display = "none";
-                document.getElementsByClassName("show-rules")[0].style.display = "block";
-                document.getElementsByClassName("hide-rules")[0].style.display = "none";
+            document.getElementById("rules").style.display = "none";
+            document.getElementsByClassName("show-rules")[0].style.display = "block";
+            document.getElementsByClassName("hide-rules")[0].style.display = "none";
         }
 
         function changeColor(div) {
@@ -163,11 +163,11 @@
         function moveBlock() {
             let block = document.getElementById("moving-block");
             if (block.style.left == "0px") { 
-            block.style.transform = "rotate(4turn)"
-            block.style.left = "calc(100% - 150px)"; 
+                block.style.transform = "rotate(4turn)"
+                block.style.left = "calc(100% - 150px)"; 
             } else {
-            block.style.transform = "rotate(0)";
-            block.style.left = "0"; 
+                block.style.transform = "rotate(0)";
+                block.style.left = "0"; 
             }
         }
 
@@ -176,9 +176,9 @@
             const currentWidth = parseInt(block.style.width);
             const newWidth = currentWidth + 50;
             if (newWidth <= 1000) {
-            block.style.width = newWidth + "px";
+                block.style.width = newWidth + "px";
             } else {
-            block.style.width = "100px";
+                block.style.width = "100px";
             }
         }
 
@@ -259,9 +259,9 @@
         <div>
             <button class="show-rules" onclick="showRules()">Показать правила игры</button>
             <button class="hide-rules" onclick="hideRules()" style="display:none">Скрыть правила игры</button>
-          </div>
+            </div>
           
-          <div id="rules" style="display:none">
+            <div id="rules" style="display:none">
             <h2>Правила игры</h2>
             <ol style=" list-style-type: upper-roman;" >
               <li>сначала нажмите на кнопку "сыграть в игру"</li>
@@ -270,9 +270,9 @@
               <li>если не угадали, то пытайтесь дальше</li>
               <li>если захотите еще раз сыграть, то нажмите на кнопку сыграть еще раз</li>
             </ol>
-          </div>
+            </div>
           
-          <div class="color" ondblclick="changeColor(this)">
+            <div class="color" ondblclick="changeColor(this)">
             Цвет: <span id="Color-name">Желтый</span><br>
             Сделайте двойной щелчок, чтобы сменить.
         </div>
