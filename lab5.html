@@ -15,11 +15,12 @@
             let b = parseInt(inputB.value);
             let result = a + b;
             alert(" Сумма " + a + " и " + b + " равна " + result);
-    }
+        }
         function showAuthor() {
             let author = "Автор страницы:\nШишкин Юстиниан\nПриветствую тарковчане";
             alert(author);
         }
+
         function showDifference() {
             let inputA = document.getElementById("numberA")
             let inputB = document.getElementById("numberB")
@@ -27,58 +28,59 @@
             let a = parseInt(inputA.value);
             let b = parseInt(inputB.value);
             let result = a - b;
-            alert(" Разность " + a + " и " + b + " равна " + result);
-    }
-    function showComposition() {
-            let inputA = document.getElementById("numberA")
-            let inputB = document.getElementById("numberB")
+                alert(" Разность " + a + " и " + b + " равна " + result);
+        }
 
-            let a = parseInt(inputA.value);
-            let b = parseInt(inputB.value);
-            let result = a * b;
-            alert(" Произведение " + a + " и " + b + " равна " + result);
-    }
-    function showDivision() {
-            let inputA = document.getElementById("numberA")
-            let inputB = document.getElementById("numberB")
+            function showComposition() {
+                let inputA = document.getElementById("numberA")
+                let inputB = document.getElementById("numberB")
 
-            let a = parseInt(inputA.value);
-            let b = parseInt(inputB.value);
-            let result = a / b;
-            alert(" Частность " + a + " и " + b + " равна " + result);
-    }
-    function changeOutput (buttonNum, backColor, textColor, border) {
-        let output = document.getElementById ("output");
-        output.innerHTML = "Нажата кнопка" + buttonNum;
-        output.style.backgroundColor = backColor;
-        output.style.color = textColor;
-        output.style.border = border;
-    }
+                let a = parseInt(inputA.value);
+                let b = parseInt(inputB.value);
+                let result = a * b;
+                alert(" Произведение " + a + " и " + b + " равна " + result);
+        }
+            function showDivision() {
+                let inputA = document.getElementById("numberA")
+                let inputB = document.getElementById("numberB")
 
-    function Sum () {
-        let Apple = document.getElementById("Apple");
-        let Pear = document.getElementById("Pear");
-        let Orange = document.getElementById("Orange");
-        let Melon = document.getElementById("Melon");
+                let a = parseInt(inputA.value);
+                let b = parseInt(inputB.value);
+                let result = a / b;
+                alert(" Частность " + a + " и " + b + " равна " + result);
+        }
+            function changeOutput (buttonNum, backColor, textColor, border) {
+                let output = document.getElementById ("output");
+                output.innerHTML = "Нажата кнопка" + buttonNum;
+                output.style.backgroundColor = backColor;
+                output.style.color = textColor;
+                output.style.border = border;
+        }
 
-        let a = parseInt(Apple.value);
-        let b = parseInt(Pear.value);
-        let c = parseInt(Orange.value);
-        let d = parseInt(Melon.value);
-        let result = a*100 + b*80 + c*150 + d*300;
-       
-        let f = document.getElementById("Money")
-        f.innerHTML = 'Итоговая сумма : ' + result + ' рублей.'
+            function Sum () {
+                let Apple = document.getElementById("Apple");
+                let Pear = document.getElementById("Pear");
+                let Orange = document.getElementById("Orange");
+                let Melon = document.getElementById("Melon");
 
-    }
+                let a = parseInt(Apple.value);
+                let b = parseInt(Pear.value);
+                let c = parseInt(Orange.value);
+                let d = parseInt(Melon.value);
+                let result = a*100 + b*80 + c*150 + d*300;
+        
+                let f = document.getElementById("Money")
+                f.innerHTML = 'Итоговая сумма : ' + result + ' рублей.'
+
+        }
 
 
-    function removeСircle(lock) {
-        lock.style.height = '0';
-        lock.style.width = '0';
-        lock.style.fontSize = '0';
-        lock.style.border = '0';
-    }
+            function removeСircle(lock) {
+                lock.style.height = '0';
+                lock.style.width = '0';
+                lock.style.fontSize = '0';
+                lock.style.border = '0';
+        }
 
     </script>
     <style>
