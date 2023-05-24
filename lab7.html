@@ -29,6 +29,10 @@
             .green {
             background-color: green;
             }
+
+            main {
+                margin-bottom: 50px;
+            }
         </style>
 
     <script>
@@ -144,10 +148,11 @@
                 tr.appendChild(td);
                 tr.appendChild(minustd);
                 table.appendChild(tr)
+            }
 
             let sum = 0;
-                for(let i = 0; i < exchange.length; i++) {
-                    sum = sum + exchange [i];
+            for(let i = 0; i < exchange.length; i++) {
+                sum = sum + exchange [i];
             }
 
             let average = sum / exchange.length;
@@ -160,8 +165,8 @@
             max.innerHTML = 'Максимальная цена акции: ' + exchangemax
             min.innerHTML = 'Минимальная цена акции: ' + exchangemin
 
-            }
         }
+        
             
     </script>
 
