@@ -21,12 +21,21 @@
         
             
         }
+
+        .clock1 {
+            text-align: right;
+            color: rebeccapurple;
+            font-size: 20px;
+            margin: 5px;
+
+        }
     </style>
 </head>
     
 <body onload="showDate()">
     <header>
         НГТУ, ФБ, Лабораторная работа 8
+        <div  class="clock1" id="clock" >00:00:00</div>
     </header>
 
     <main>
@@ -36,6 +45,7 @@
             <div id="current-date2"></div>
             <div id="current-date3"></div>
             <div id="current-date4"></div>
+            <div id="current-date5"></div>
         </div>
 
         <div>
@@ -48,6 +58,7 @@
         <div>
             <button onclick="Clear()">Очистить после ввода</button>
         </div>
+
     </main>
     
 

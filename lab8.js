@@ -33,3 +33,16 @@ function Clear() {
     inputDate.value = '';
     day.innerHTML = '';
 }
+
+function showTime() {
+    let today = new Date();
+    let currentTime = today.toLocaleTimeString('ru-RU');
+    document.getElementById('clock').innerHTML = currentTime;
+}
+setInterval(showTime, 1000);
+
+function Vivid() {
+    let out5 = document.getElementById('current-date5');
+    let today5 = new Date();
+    out5.innerHTML ="Дата и время для арабской локали: " + today5.toLocaleString('ar-AE');
+}
